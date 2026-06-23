@@ -123,3 +123,25 @@ max-width:350px;
 border-radius:20px;
 margin-bottom:20px;
 }
+.heart{
+position:fixed;
+bottom:-30px;
+pointer-events:none;
+animation:float 8s linear forwards;
+opacity:.6;
+z-index:999;
+}
+
+@keyframes float{
+
+0%{
+transform:translateY(0);
+opacity:.6;
+}
+
+100%{
+transform:translateY(-120vh);
+opacity:0;
+}
+
+}
