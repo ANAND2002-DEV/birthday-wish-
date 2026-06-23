@@ -139,5 +139,25 @@ opacity:.6;
 transform:translateY(-120vh);
 opacity:0;
 }
+.letter-box{
+max-width:750px;
+margin:auto;
+background:white;
+padding:30px;
+border-radius:20px;
+box-shadow:0 4px 15px rgba(0,0,0,.08);
+text-align:left;
+line-height:2;
+}
 
+.letter-date{
+text-align:right;
+margin-bottom:20px;
+}
+
+.signature{
+margin-top:30px;
+font-family:'Dancing Script',cursive;
+font-size:1.8rem;
+color:#ff4f81;
 }
