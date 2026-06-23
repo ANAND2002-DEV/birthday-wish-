@@ -1,199 +1,100 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Birthday Love ❤️</title>
+    <title>Happy Birthday Sneha ❤️</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-```
-<!-- Background Music -->
 <audio id="bgMusic" loop>
     <source src="birthday-website/main.mp3" type="audio/mpeg">
 </audio>
 
-<!-- Floating Stars -->
-<div class="stars"></div>
-
-<!-- Hero Section -->
 <section class="hero">
-    <div class="overlay"></div>
-
-    <img src="birthday-website/photo14.jpg" class="hero-bg">
-
-    <div class="hero-content">
-        <h1>Happy Birthday Love ❤️</h1>
-        <p>July 4, 2026</p>
-
-        <button id="startBtn">
-            Open Your Surprise
-        </button>
+    <img src="birthday-website/photo14.jpg" alt="Sneha">
+    <div class="overlay">
+        <h1>Happy Birthday, Love ❤️</h1>
+        <p>For My Baby</p>
+        <button onclick="startExperience()">Open Your Surprise</button>
     </div>
 </section>
 
-<!-- Memory Section -->
-<section class="memory reveal">
-    <h2>9 October 2025 ❤️</h2>
-
+<section class="story">
+    <h2>Our Story ✨</h2>
     <p>
-        The day we confessed our love.
-    </p>
-
-    <p>
-        A single conversation changed everything,
-        and since then you've become one of the most
-        important parts of my life.
+        Every beautiful story begins with a moment.
+        Ours began long before we realized it,
+        but 9 October 2025 will always remain special,
+        because that was the day I finally told you what my heart already knew.
     </p>
 </section>
 
-<!-- Gallery -->
-<section class="gallery reveal">
+<section class="gallery">
+    <h2>Our Memories 📸</h2>
 
-    <h2>My Favorite Pictures Of You 📸</h2>
-
-    <div class="gallery-grid">
-
+    <div class="grid">
         <img src="birthday-website/photo01.jpg">
         <img src="birthday-website/photo02.jpg">
         <img src="birthday-website/photo03.jpg">
+        <img src="birthday-website/photo04.jpg">
+        <img src="birthday-website/photo05.jpg">
         <img src="birthday-website/photo06.jpg">
         <img src="birthday-website/photo07.jpg">
         <img src="birthday-website/photo08.jpg">
-        <img src="birthday-website/photo09.jpg">
         <img src="birthday-website/photo10.jpg">
-        <img src="birthday-website/photo12.jpg">
-        <img src="birthday-website/photo14.jpg">
-
+        <img src="birthday-website/photo11.jpg">
     </div>
-
 </section>
 
-<!-- Letter Section -->
-<section class="letter reveal">
+<section class="letter">
+    <h2>To My Love 💌</h2>
 
-    <h2>A Letter For You 💌</h2>
+    <div class="letter-box">
+        My Dearest Sneha,
 
-    <div class="letter-preview">
+        Happy Birthday, Baby ❤️
 
-        Dear Love,<br><br>
+        Today is all about celebrating you,
+        your smile, your kindness, your beautiful heart,
+        and every little thing that makes you special.
 
-        Happy Birthday ❤️<br><br>
+        Since the day you became a part of my life,
+        everything has felt brighter and more meaningful.
+        You have given me memories that I will cherish forever.
 
-        Today is all about you, and I wanted to create
-        something that reminds you how much you mean to me...
+        9 October 2025 will always stay close to my heart,
+        because it was the day I gathered the courage to tell you how much you mean to me.
 
+        I don't know what the future holds,
+        but I know one thing for certain:
+        every moment spent with you is a gift.
+
+        Thank you for being my happiness,
+        my comfort,
+        and my favorite person.
+
+        Happy Birthday once again, Love.
+
+        Forever Yours ❤️
     </div>
-
-    <button id="letterBtn">
-        Read My Letter ❤️
-    </button>
-
-    <div id="fullLetter" class="hidden">
-
-        <p>
-            Dear Love,
-        </p>
-
-        <p>
-            Happy Birthday ❤️
-        </p>
-
-        <p>
-            Today is all about you, and I wanted to create something that reminds you how much you mean to me.
-        </p>
-
-        <p>
-            When I think about us, one of the first things that comes to my mind is 9 October 2025 — the day we confessed our love. It was the beginning of something that changed my life in ways I never expected. Since then, you've become such an important part of my world.
-        </p>
-
-        <p>
-            What I admire most about you is your calmness. No matter what happens, you have a way of making things feel lighter and easier. Your love, care, and patience mean more to me than I can ever fully explain.
-        </p>
-
-        <p>
-            You've helped me through so many things. Honestly, without you, I wouldn't be the person I am today. You've supported me, listened to me, believed in me, and stayed by my side when I needed it most.
-        </p>
-
-        <p>
-            Thank you for every conversation, every smile, every memory, and every moment we've shared together.
-        </p>
-
-        <p>
-            On your birthday, I don't just wish you happiness today—I wish you happiness in everything you do, every dream you chase, and every step you take in life.
-        </p>
-
-        <p>
-            No matter what happens, you'll always be someone very special to me.
-        </p>
-
-        <p>
-            Happy Birthday, Baby ❤️
-        </p>
-
-        <p>
-            With all my love,
-            <br>
-            Anand
-        </p>
-
-    </div>
-
 </section>
 
-<!-- Final Surprise -->
-<section class="final-section reveal">
+<section class="final">
+    <img src="birthday-website/photo09.jpg">
 
-    <img src="birthday-website/photo09.jpg" class="final-bg">
+    <h2>I Love You, Baby ❤️</h2>
 
-    <div class="final-overlay"></div>
-
-    <div class="final-content">
-
-        <h2>One Last Thing ❤️</h2>
-
-        <p>
-            Thank you for every smile.
-        </p>
-
-        <p>
-            Thank you for every memory.
-        </p>
-
-        <p>
-            Thank you for being you.
-        </p>
-
-        <p>
-            Happy Birthday Baby ❤️
-        </p>
-
-        <h3>
-            With all my love,
-            <br>
-            Anand
-        </h3>
-
-    </div>
-
+    <p>
+        No matter how many birthdays come and go,
+        you will always be my favorite chapter.
+    </p>
 </section>
 
-<!-- Image Modal -->
-<div id="modal" class="modal">
-
-    <span id="closeModal">&times;</span>
-
-    <img id="modalImg">
-
-</div>
-
-<!-- Floating Hearts -->
-<div id="hearts-container"></div>
+<div id="hearts"></div>
 
 <script src="script.js"></script>
-```
 
 </body>
 </html>
