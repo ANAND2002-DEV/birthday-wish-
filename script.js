@@ -1,143 +1,35 @@
-/* MUSIC */
+function startExperience() {
 
-const startBtn = document.getElementById("startBtn");
 const music = document.getElementById("bgMusic");
 
-startBtn.addEventListener("click", () => {
-
-```
-music.play();
-
-document.querySelector(".memory").scrollIntoView({
-    behavior: "smooth"
-});
-```
-
+music.play().catch(() => {
+console.log("Autoplay blocked");
 });
 
-/* LETTER */
-
-const letterBtn = document.getElementById("letterBtn");
-const fullLetter = document.getElementById("fullLetter");
-
-letterBtn.addEventListener("click", () => {
-
-```
-if(fullLetter.style.display === "block"){
-
-    fullLetter.style.display = "none";
-    letterBtn.innerText = "Read My Letter ❤️";
-
-}else{
-
-    fullLetter.style.display = "block";
-    letterBtn.innerText = "Hide Letter ❤️";
-
-}
-```
-
+window.scrollTo({
+top: window.innerHeight,
+behavior: "smooth"
 });
-
-/* IMAGE MODAL */
-
-const images = document.querySelectorAll(".gallery-grid img");
-
-const modal = document.getElementById("modal");
-const modalImg = document.getElementById("modalImg");
-const closeModal = document.getElementById("closeModal");
-
-images.forEach(image => {
-
-```
-image.addEventListener("click", () => {
-
-    modal.style.display = "block";
-    modalImg.src = image.src;
-
-});
-```
-
-});
-
-closeModal.addEventListener("click", () => {
-
-```
-modal.style.display = "none";
-```
-
-});
-
-modal.addEventListener("click", () => {
-
-```
-modal.style.display = "none";
-```
-
-});
-
-/* REVEAL ON SCROLL */
-
-const reveals = document.querySelectorAll(".reveal");
-
-function revealSections(){
-
-```
-reveals.forEach(section => {
-
-    const windowHeight = window.innerHeight;
-    const revealTop = section.getBoundingClientRect().top;
-
-    if(revealTop < windowHeight - 100){
-
-        section.classList.add("active");
-
-    }
-
-});
-```
-
 }
 
-window.addEventListener("scroll", revealSections);
-revealSections();
+const heartsContainer = document.getElementById("hearts");
 
-/* FLOATING HEARTS */
+setInterval(() => {
 
-const heartsContainer = document.getElementById("hearts-container");
-
-function createHeart(){
-
-```
 const heart = document.createElement("div");
 
 heart.classList.add("heart");
-
 heart.innerHTML = "❤️";
 
-heart.style.left = Math.random() * 100 + "vw";
+heart.style.left = Math.random()*100 + "vw";
 
 heart.style.fontSize =
-    Math.random() * 20 + 20 + "px";
+(Math.random()*20 + 15) + "px";
 
-heartsContainer.appendChild(heart);
+document.body.appendChild(heart);
 
-setTimeout(() => {
+setTimeout(()=>{
+heart.remove();
+},6000);
 
-    heart.remove();
-
-}, 6000);
-```
-
-}
-
-setInterval(createHeart, 800);
-
-/* EXTRA GLOW EFFECT */
-
-window.addEventListener("load", () => {
-
-```
-document.body.style.opacity = "1";
-```
-
-});
+},500);
