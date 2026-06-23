@@ -32,17 +32,13 @@ object-fit:cover;
 
 .cover-overlay{
 position:absolute;
-top:50%;
+bottom:80px;
 left:50%;
-transform:translate(-50%,-50%);
+transform:translateX(-50%);
 text-align:center;
-background:rgba(0,0,0,0.35);
-padding:25px;
-border-radius:25px;
-backdrop-filter:blur(4px);
 color:white;
-width:85%;
-max-width:320px;
+width:90%;
+text-shadow:2px 2px 8px rgba(0,0,0,0.8);
 }
 
 .cover-overlay h1{
