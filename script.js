@@ -1,35 +1,43 @@
 function startExperience(){
 
-document.getElementById("mainContent").style.display="block";
+    const content = document.getElementById("mainContent");
+    const cover = document.getElementById("coverPage");
+    const music = document.getElementById("bgMusic");
 
-const music=document.getElementById("bgMusic");
+    cover.style.display = "none";
+    content.style.display = "block";
 
-music.play().catch(()=>{});
+    music.play().catch(() => {});
 
-document.getElementById("mainContent").scrollIntoView({
-behavior:"smooth"
-});
+    startHearts();
 
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
 }
 
-const heartsContainer=document.getElementById("hearts");
+function startHearts(){
 
-setInterval(()=>{
+    setInterval(() => {
 
-const heart=document.createElement("div");
+        const heart = document.createElement("div");
 
-heart.classList.add("heart");
+        heart.className = "heart";
 
-heart.innerHTML="❤️";
+        heart.innerHTML = "❤️";
 
-heart.style.left=Math.random()*100+"vw";
+        heart.style.left = Math.random() * 100 + "vw";
 
-heart.style.fontSize=(15+Math.random()*15)+"px";
+        heart.style.fontSize =
+        (15 + Math.random() * 15) + "px";
 
-document.body.appendChild(heart);
+        document.body.appendChild(heart);
 
-setTimeout(()=>{
-heart.remove();
-},8000);
+        setTimeout(() => {
+            heart.remove();
+        }, 8000);
 
-},1200);
+    }, 1200);
+
+}
