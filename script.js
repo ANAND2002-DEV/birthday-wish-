@@ -1,35 +1,35 @@
-function startExperience() {
+function startExperience(){
 
-const music = document.getElementById("bgMusic");
+document.getElementById("mainContent").style.display="block";
 
-music.play().catch(() => {
-console.log("Autoplay blocked");
+const music=document.getElementById("bgMusic");
+
+music.play().catch(()=>{});
+
+document.getElementById("mainContent").scrollIntoView({
+behavior:"smooth"
 });
 
-window.scrollTo({
-top: window.innerHeight,
-behavior: "smooth"
-});
 }
 
-const heartsContainer = document.getElementById("hearts");
+const heartsContainer=document.getElementById("hearts");
 
-setInterval(() => {
+setInterval(()=>{
 
-const heart = document.createElement("div");
+const heart=document.createElement("div");
 
 heart.classList.add("heart");
-heart.innerHTML = "❤️";
 
-heart.style.left = Math.random()*100 + "vw";
+heart.innerHTML="❤️";
 
-heart.style.fontSize =
-(Math.random()*20 + 15) + "px";
+heart.style.left=Math.random()*100+"vw";
+
+heart.style.fontSize=(15+Math.random()*15)+"px";
 
 document.body.appendChild(heart);
 
 setTimeout(()=>{
 heart.remove();
-},6000);
+},8000);
 
-},500);
+},1200);
